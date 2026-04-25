@@ -40,5 +40,18 @@ Aby skompilować projekt, musisz mieć zainstalowane następujące biblioteki w 
 3. Przy pierwszym uruchomieniu wykonaj kalibrację dotykając punktów na ekranie.
 4. Ciesz się bezprzewodowym sterowaniem!
 
+## ⚠️ Ważne ustawienia kompilacji (Arduino IDE)
+
+Ze względu na rozmiar stosu Bluetooth (biblioteka `BleKeyboard`), projekt wymaga odpowiedniego ustawienia partycji pamięci Flash. Jeśli użyjesz domyślnych ustawień, kod może się nie zmieścić.
+
+### Wymagania:
+- **Mikrokontroler:** ESP32 (Flash 4MB).
+- **Partition Scheme:** Musisz ustawić na **Huge APP (3MB No OTA/1MB SPIFFS)**.
+
+### Jak to ustawić?
+1. W Arduino IDE wejdź w menu **Narzędzia (Tools)**.
+2. Znajdź opcję **Partition Scheme**.
+3. Wybierz z listy: **Huge APP (3MB No OTA/1MB SPIFFS)**.
+4. Dopiero teraz kliknij **Upload**.
 ---
 *Projekt stworzony z pasją do muzyki i mikrokontrolerów.*
